@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="Module1-css.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#register">Register</a>
+    <a href="#video">Video</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#map">Find Events</a>
+    <a href="help.html" target="_blank">Help</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div id="welcomeBanner">Welcome to the Community Portal</div>
+      <p>
+        <span style="color: red; font-weight: bold;">Special Offer: First 50 users get free entry!</span>
+        <span class="highlight">Don’t miss out on local fun!</span>
+      </p>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <div id="eventList">
+        <!-- Event cards will be injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>Past Event Gallery</h2>
+      <table>
+        <caption>Community Event Moments</caption>
+        <tr>
+          <td><img src="event1.jpg" alt="Music Night" title="Music Night" class="gallery-img"></td>
+          <td><img src="event2.jpg" alt="Food Fest" title="Food Fest" class="gallery-img"></td>
+          <td><img src="event3.jpg" alt="Art Expo" title="Art Expo" class="gallery-img"></td>
+        </tr>
+        <tr>
+          <td><img src="event4.jpg" alt="Tech Talk" title="Tech Talk" class="gallery-img"></td>
+          <td><img src="event5.jpg" alt="Charity Run" title="Charity Run" class="gallery-img"></td>
+          <td><img src="event6.jpg" alt="Drama Night" title="Drama Night" class="gallery-img"></td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register">
+      <h2>Register for Events</h2>
+      <form id="eventForm">
+        <input type="text" name="name" placeholder="Name" required autofocus>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required onblur="validatePhone()">
+        <input type="date" name="date" required>
+        <select name="eventType" id="eventType">
+          <option value="music">Music</option>
+          <option value="sports">Sports</option>
+          <option value="workshop">Workshop</option>
+        </select>
+        <textarea name="message" placeholder="Message..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <output id="confirmation"></output>
+      <button onclick="clearPreferences()">Clear Preferences</button>
+    </section>
+
+    <!-- Video Invite -->
+    <section id="video">
+      <h2>Watch Our Promo</h2>
+      <video width="320" height="240" controls oncanplay="showVideoReadyMessage()">
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoMessage"></p>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback">
+      <h2>Feedback</h2>
+      <select id="feeSelector" onchange="showFee()">
+        <option value="Free">Music - Free</option>
+        <option value="₹100">Workshop - ₹100</option>
+        <option value="₹200">Sports - ₹200</option>
+      </select>
+      <p id="feeDisplay"></p>
+
+      <textarea id="feedbackText" placeholder="Write your feedback..." onkeyup="countChars()"></textarea>
+      <p>Characters typed: <span id="charCount">0</span></p>
+
+      <img src="event1.jpg" alt="Thumbnail" ondblclick="enlargeImage(this)" width="120">
+    </section>
+
+    <!-- Geolocation Map -->
+    <section id="map">
+      <h2>Find Events Near You</h2>
+      <button onclick="getLocation()">Locate Me</button>
+      <p id="locationOutput"></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: support@localportal.org</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Local Community Event Portal</p>
+  </footer>
+
+  <script src="Module1-js.js"></script>
+</body>
+</html>
