@@ -1,0 +1,38 @@
+Demo.java:
+public class Demo {
+    public static int square(int x) {
+        return x * x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(square(5));
+    }
+}
+
+Command to Compile and Inspect:
+javac Demo.java
+javap -c Demo
+
+Sample Output (bytecode):
+Compiled from "Demo.java"
+public class Demo {
+  public Demo();
+    Code:
+       0: aload_0
+       1: invokespecial #1                        4: return
+
+  public static int square(int);
+    Code:
+       0: iload_0
+       1: iload_0
+       2: imul
+       3: ireturn
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: getstatic     #2                  java/lang/System.out:Ljava/io/PrintStream;
+       3: iconst_5
+       4: invokestatic  #3                         
+7: invokevirtual #4                       
+10: return
+}
