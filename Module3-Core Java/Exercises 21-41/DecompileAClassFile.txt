@@ -1,0 +1,12 @@
+
+public class Example {
+    public static void main(String[] args) {
+        System.out.println("Hello, decompiler!");
+    }
+}
+
+-Compile the code using the command:
+ javac Example.java
+-This creates HelloWorld.class file.
+-Open HelloWorld.class file with JD-GUI or CFR tool.
+-Analyze the decompiled source code displayed by the tool.
