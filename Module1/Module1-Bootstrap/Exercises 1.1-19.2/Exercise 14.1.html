@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Display Utilities</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+
+<div class="container my-5">
+  <h2>Responsive Display Examples</h2>
+
+  <!-- Hidden on all except medium and larger -->
+  <div class="d-none d-md-block p-3 bg-primary text-white mb-3">
+    Visible on md and larger (≥768px)
+  </div>
+
+  <!-- Hidden on all except large and larger, flex container -->
+  <div class="d-none d-lg-flex p-3 bg-success text-white mb-3 justify-content-center">
+    Visible on lg and larger (≥992px) as flex container
+  </div>
+
+  <!-- Visible on all except medium and larger -->
+  <div class="d-block d-md-none p-3 bg-warning text-dark">
+    Visible only on small and xs (<768px)
+  </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

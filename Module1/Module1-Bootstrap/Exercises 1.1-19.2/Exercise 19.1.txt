@@ -1,0 +1,29 @@
+Set up a Bootstrap 5 project with Sass using npm
+
+Steps:
+
+1. Create a project folder and open terminal inside it.
+
+2. Initialize npm:
+     
+    npm install bootstrap sass
+
+3. Install Bootstrap and Sass:
+
+    npm install bootstrap sass
+
+4. Create a folder named scss.
+
+5. Inside scss, create a file called custom.scss.
+
+6. Import Bootstrap SCSS in `custom.scss`:
+
+   @import "../node_modules/bootstrap/scss/bootstrap";
+   
+7. Compile SCSS to CSS:
+
+    npx sass scss/custom.scss css/custom.css
+   
+
+8. Link the compiled CSS (css/custom.css) in your HTML page.
+

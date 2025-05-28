@@ -1,0 +1,22 @@
+Customize primary colors and border radius via_variables.scss and recompile Bootstrap
+
+Steps:
+
+1. In your scss folder, create a new file named _custom-variables.scss.
+
+2. Add custom variable overrides in _custom-variables.scss:
+
+   $primary: #ff5733;       
+   $border-radius: 1.5rem;  
+   
+3. Update your custom.scss to import your variables before Bootstrap:
+
+   @import "custom-variables";
+   @import "../node_modules/bootstrap/scss/bootstrap";
+  
+4. Recompile SCSS to CSS:
+
+   npx sass scss/custom.scss css/custom.css
+  
+5. Refresh your HTML page linked to the updated CSS to see the changes.
+

@@ -1,0 +1,9 @@
+Exploring the Structure of the Downloaded Bootstrap Directory
+
+The downloaded Bootstrap directory typically contains the following main folders:
+
+css/ Folder:
+This folder includes the compiled CSS files of Bootstrap. These files define the visual appearance of HTML elements, such as layout, colors, spacing, and typography. The most commonly used file here is bootstrap.min.css, which is a compressed version optimized for faster loading.
+
+js/ Folder:
+This folder contains Bootstrap’s JavaScript files that enable interactive components like modals, carousels, dropdowns, and tooltips. The bootstrap.bundle.min.js file includes Bootstrap’s JavaScript along with Popper.js (used for positioning elements like tooltips).

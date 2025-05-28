@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+
+  <div class="container mt-5" style="max-width: 500px;">
+    <h2>Registration Form</h2>
+    <form>
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" />
+      </div>
+
+      <!-- Email with input-group -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <div class="input-group">
+          <span class="input-group-text">@</span>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" />
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" />
+      </div>
+
+      <!-- Terms checkbox -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="terms" />
+        <label class="form-check-label" for="terms">
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
